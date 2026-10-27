@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyoutifull – Salón de Belleza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="shortcut icon" href="img/logo.png" rel="icon">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <img src="img/logo.png" alt="Logo Beyoutifull">
+</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#servicios">Catálogo</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#ofertas">Ofertas</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="https://wa.me/573000000000" class="nav-cta" target="_blank">Reservar</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ========== SLIDER ========== -->
+<section class="slider" id="inicio">
+  <div class="slide slide-1 active">
+    <div class="slide-content">
+      <span class="slide-tag">Bienvenida al arte de la belleza</span>
+      <h2 class="slide-title">Transformamos tu <em>look,</em><br>resaltamos tu esencia.</h2>
+      <p class="slide-sub">Estilistas certificados · Productos premium · Ambiente exclusivo</p>
+    </div>
+  </div>
+  <div class="slide slide-2">
+    <div class="slide-content">
+      <span class="slide-tag">Colorimetría de vanguardia</span>
+      <h2 class="slide-title">Tu cabello merece <em>brillar</em><br>como tú.</h2>
+      <p class="slide-sub">Técnicas personalizadas para cada tipo de cabello</p>
+    </div>
+  </div>
+  <div class="slide slide-3">
+    <div class="slide-content">
+      <span class="slide-tag">Nail Art & Manicure</span>
+      <h2 class="slide-title">Belleza en cada <em>detalle,</em><br>arte en cada uña.</h2>
+      <p class="slide-sub">Diseños únicos que expresan tu personalidad</p>
+    </div>
+  </div>
+  <div class="slide slide-4">
+    <div class="slide-content">
+      <span class="slide-tag">Rituales capilares</span>
+      <h2 class="slide-title">Cuida tu cabello,<br><em>celebra</em> quien eres.</h2>
+      <p class="slide-sub">Tratamientos de recuperación y nutrición profunda</p>
+    </div>
+  </div>
+
+  <button class="slider-arrow prev" onclick="changeSlide(-1)">&#8592;</button>
+  <button class="slider-arrow next" onclick="changeSlide(1)">&#8594;</button>
+
+  <div class="slider-nav">
+    <div class="dot active" onclick="goToSlide(0)"></div>
+    <div class="dot" onclick="goToSlide(1)"></div>
+    <div class="dot" onclick="goToSlide(2)"></div>
+    <div class="dot" onclick="goToSlide(3)"></div>
+  </div>
+</section>
+
+<!-- ========== NUESTRA HISTORIA ========== -->
+<section id="historia">
+  <div class="historia-img">
+    <img src="img/img1.jpeg"
+         alt="Objetos de peluquería – peines, tijeras, espejos dorados" loading="lazy">
+  </div>
+  <div class="historia-text reveal">
+    <span class="section-label">Nuestra Historia</span>
+    <h2 class="section-title">Un espacio donde<br>la belleza es <em>arte</em></h2>
+    <div class="divider"></div>
+    <p>En Beyoutifull creemos que cada persona merece sentirse extraordinaria. Nuestro equipo de estilistas certificados transforma tu visión en realidad con técnicas de vanguardia y productos premium.</p>
+    <p>Ofrecemos cortes, colorimetría, peinados, manicure, nail art, tratamientos capilares y mucho más en un ambiente exclusivo diseñado para tu comodidad.</p>
+    <a href="#servicios" class="btn-gold">Descubrir servicios</a>
+  </div>
+</section>
+
+<!-- ========== SERVICIOS / CATÁLOGO ========== -->
+<section id="servicios">
+  <div class="reveal">
+    <span class="section-label">Catálogo de servicios</span>
+    <h2 class="section-title">Lo que hacemos<br>por <em>ti</em></h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="servicios-grid">
+    <!-- Corte femenino -->
+    <div class="servicio-card reveal" onclick="openLightbox(0)">
+      <img src="img/img1...jpeg" alt="Corte femenino" loading="lazy">
+      <div class="servicio-info">
+        <span class="servicio-cat">Cabello</span>
+        <span class="servicio-name">Corte Femenino</span>
+      </div>
+      <div class="servicio-zoom">⊕</div>
+    </div>
+    <!-- Colorimetría -->
+    <div class="servicio-card reveal" onclick="openLightbox(1)">
+      <img src="img/img4...t.jpeg" alt="Colorimetría" loading="lazy">
+      <div class="servicio-info">
+        <span class="servicio-cat">Color</span>
+        <span class="servicio-name">Colorimetría</span>
+      </div>
+      <div class="servicio-zoom">⊕</div>
+    </div>
+    <!-- Peinado de novia -->
+    <div class="servicio-card reveal" onclick="openLightbox(2)">
+      <img src="img/img peinado.jfif" alt="Peinado" loading="lazy">
+      <div class="servicio-info">
+        <span class="servicio-cat">Peinado</span>
+        <span class="servicio-name">Peinado de Ocasión</span>
+      </div>
+      <div class="servicio-zoom">⊕</div>
+    </div>
+    <!-- Manicure -->
+    <div class="servicio-card reveal" onclick="openLightbox(3)">
+      <img src="img/img3...uñas.jpeg" alt="Manicure" loading="lazy">
+      <div class="servicio-info">
+        <span class="servicio-cat">Uñas</span>
+        <span class="servicio-name">Manicure Clásica</span>
+      </div>
+      <div class="servicio-zoom">⊕</div>
+    </div>
+    <!-- Nail Art -->
+    <div class="servicio-card reveal" onclick="openLightbox(4)">
+      <img src="img/img diseño.jfif" alt="Nail Art" loading="lazy">
+      <div class="servicio-info">
+        <span class="servicio-cat">Uñas</span>
+        <span class="servicio-name">Nail Art & Diseño</span>
+      </div>
+      <div class="servicio-zoom">⊕</div>
+    </div>
+    <!-- Tratamiento capilar -->
+    <div class="servicio-card reveal" onclick="openLightbox(5)">
+      <img src="img/img2....jpeg" alt="Tratamiento capilar" loading="lazy">
+      <div class="servicio-info">
+        <span class="servicio-cat">Tratamientos</span>
+        <span class="servicio-name">Nutrición Capilar</span>
+      </div>
+      <div class="servicio-zoom">⊕</div>
+    </div>
+    <!-- Barbería -->
+    <div class="servicio-card reveal" onclick="openLightbox(6)">
+      <img src="img/img corte.jfif" alt="Barbería" loading="lazy">
+      <div class="servicio-info">
+        <span class="servicio-cat">Barbería</span>
+        <span class="servicio-name">Corte & Afeitado</span>
+      </div>
+      <div class="servicio-zoom">⊕</div>
+    </div>
+    <!-- Maquillaje -->
+    <div class="servicio-card reveal" onclick="openLightbox(7)">
+      <img src="img/img maqui.jfif" alt="Maquillaje" loading="lazy">
+      <div class="servicio-info">
+        <span class="servicio-cat">Belleza</span>
+        <span class="servicio-name">Maquillaje Profesional</span>
+      </div>
+      <div class="servicio-zoom">⊕</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LIGHTBOX ========== -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+  <div class="lightbox-inner">
+    <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+    <div class="lightbox-prev" onclick="lbNav(-1)">&#8592;</div>
+    <img id="lbImg" src="" alt="">
+    <p class="lightbox-caption" id="lbCaption"></p>
+    <div class="lightbox-next" onclick="lbNav(1)">&#8594;</div>
+  </div>
+</div>
+
+<!-- ========== VIDEO PROMOCIONAL ========== -->
+<section id="video">
+  <div class="reveal">
+    <span class="section-label">Video Promocional</span>
+    <h2 class="section-title">Vive la <em>experiencia</em><br>Beyoutifull</h2>
+    <div class="divider" style="margin:0 auto 22px;"></div>
+  </div>
+  <div class="video-wrapper reveal" style="max-width:1080px;margin:0 auto;">
+    <video id="promoVideo" controls playsinline preload="metadata"
+      style="width:100%;height:auto;display:block;border-radius:4px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,0.25);"
+      aria-label="Video promocional Beyoutifull">
+      <source src="img/vd-hz.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
+  </div>
+</section>
+
+<!-- ========== BLOG ========== -->
+<section id="blog">
+  <div class="reveal">
+    <span class="section-label">Nuestro Blog</span>
+    <h2 class="section-title">Consejos &amp; <em>tendencias</em></h2>
+    <div class="divider"></div>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card reveal">
+      <div class="blog-img">
+        <img src="img/tendencias.jfif" alt="Tendencias cabello 2025" loading="lazy">
+      </div>
+      <div class="blog-body">
+        <span class="blog-tag">Tendencias</span>
+        <h3 class="blog-title">Los colores de cabello que dominarán este año</h3>
+        <p class="blog-excerpt">Descubre los tonos más buscados en salones de todo el mundo y cómo puedes adaptarlos a tu estilo personal.</p>
+      </div>
+    </div>
+    <div class="blog-card reveal">
+      <div class="blog-img">
+        <img src="img/tips.webp" alt="Cuidado capilar" loading="lazy">
+      </div>
+      <div class="blog-body">
+        <span class="blog-tag">Cuidado</span>
+        <h3 class="blog-title">Rutina de hidratación para cabello dañado</h3>
+        <p class="blog-excerpt">Nuestros expertos comparten los secretos para recuperar la vitalidad y el brillo de tu cabello desde casa.</p>
+      </div>
+    </div>
+    <div class="blog-card reveal">
+      <div class="blog-img">
+        <img src="img/uñas.jfif" alt="Nail art" loading="lazy">
+      </div>
+      <div class="blog-body">
+        <span class="blog-tag">Nail Art</span>
+        <h3 class="blog-title">5 diseños de uñas para cualquier ocasión</h3>
+        <p class="blog-excerpt">Desde diseños minimalistas hasta creaciones artísticas, encuentra la inspiración perfecta para tu próxima cita.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OFERTAS ========== -->
+<section id="ofertas">
+  <div class="reveal">
+    <span class="section-label" style="color:var(--gold);">Promociones especiales</span>
+    <h2 class="section-title">Ofertas <em>exclusivas</em></h2>
+    <div class="divider" style="margin:0 auto 10px;"></div>
+    <p style="color:rgba(250,246,241,0.55);font-size:0.82rem;letter-spacing:0.08em;">Válidas solo este mes — ¡no te las pierdas!</p>
+  </div>
+  <div class="ofertas-grid reveal">
+    <div class="oferta-card">
+      <h3 class="oferta-nombre">Pack Esencial</h3>
+      <p class="oferta-precio"><span>$</span>89.900</p>
+      <ul class="oferta-lista">
+        <li>Corte + lavado + blow dry</li>
+        <li>Mascarilla nutritiva</li>
+        <li>Manicure básica</li>
+        <li>Consulta de imagen gratuita</li>
+      </ul>
+      <a href="https://wa.me/573244047119" class="btn-gold" target="_blank">Reservar ahora</a>
+    </div>
+    <div class="oferta-card featured">
+      <div class="oferta-badge">Popular</div>
+      <h3 class="oferta-nombre">Pack Glamour</h3>
+      <p class="oferta-precio"><span>$</span>189.900</p>
+      <ul class="oferta-lista">
+        <li>Corte + color completo</li>
+        <li>Tratamiento Kératine</li>
+        <li>Manicure + Pedicure gel</li>
+        <li>Nail art (2 uñas)</li>
+        <li>Maquillaje natural</li>
+      </ul>
+      <a href="https://wa.me/573244047119" class="btn-gold" target="_blank">Reservar ahora</a>
+    </div>
+    <div class="oferta-card">
+      <h3 class="oferta-nombre">Pack Novia</h3>
+      <p class="oferta-precio"><span>$</span>299.900</p>
+      <ul class="oferta-lista">
+        <li>Peinado de novia + prueba</li>
+        <li>Maquillaje nupcial</li>
+        <li>Manicure + nail art completo</li>
+        <li>Tratamiento capilar express</li>
+        <li>Asesoría personalizada</li>
+      </ul>
+      <a href="https://wa.me/573244047119" class="btn-gold" target="_blank">Reservar ahora</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">
+    <img src="img/logo.png" alt="Logo Beyoutifull">
+</a>
+      <p>Transformamos tu look y resaltamos tu esencia con el arte de la belleza en un ambiente exclusivo y sofisticado.</p>
+      <div class="social-links">
+        <a href="https://wa.me/573244047119" class="social-btn" target="_blank" title="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/beyoutiful_023?stkn=MXNiOHJxdXRyYnd2Yg==" class="social-btn" target="_blank" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@beyoutifil_023?_r=1&_t=ZS-99wikOjPCYK" class="social-btn" target="_blank" title="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@beyoutifil023" class="social-btn" target="_blank" title="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="#servicios">Cortes & Peinados</a></li>
+        <li><a href="#servicios">Colorimetría</a></li>
+        <li><a href="#servicios">Manicure & Pedicure</a></li>
+        <li><a href="#servicios">Nail Art</a></li>
+        <li><a href="#servicios">Tratamientos</a></li>
+        <li><a href="#servicios">Maquillaje</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#historia">Nuestra Historia</a></li>
+        <li><a href="#servicios">Catálogo</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#ofertas">Ofertas</a></li>
+        <li><a href="#video">Video</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="tel:+57 324 4047119">+57 324 4047119</a></li>
+        <li><a href="mailto:beyoutiful_023.co">beyoutiful_023</a></li>
+        <li><a href="#">Lun–vie: 9am – 8pm</a></li>
+        <li><a href="#">sab: 10am – 8pm</a></li>
+         <li><a href="#">dom: cerrado</a></li>
+           <li><a href="#">calle16sur18-49 Barrio:San Cristobal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Beyoutifull · Todos los derechos reservados · Diseñado por FIL DRAGON STUDIOS ✦ para ti</p>   
+  </div>
+</footer>
+
+<!-- ========== WHATSAPP FLOTANTE ========== -->
+<div class="whatsapp-float">
+  <div class="wa-bubble">¡Reserva tu cita ahora! 💅</div>
+  <a href="https://wa.me/573000000000?text=Hola%20Beyoutifull%2C%20quiero%20reservar%20una%20cita"
+     class="wa-btn" target="_blank" rel="noopener" title="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="js/script.js"></script>
+</body>
+</html>
